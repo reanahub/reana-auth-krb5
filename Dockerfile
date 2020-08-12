@@ -11,3 +11,5 @@ RUN apt-get update && \
       --no-install-recommends && \
     apt-get -y autoremove && \
     apt-get -y clean
+
+ADD krb5.conf /etc/krb5.conf
