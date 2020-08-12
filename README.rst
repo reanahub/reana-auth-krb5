@@ -2,6 +2,15 @@
 REANA Authentication Kerberos5
 ==============================
 
+.. image:: https://img.shields.io/travis/reanahub/reana-auth-krb5.svg
+   :target: https://travis-ci.org/reanahub/reana-auth-krb5
+
+.. image:: https://badges.gitter.im/Join%20Chat.svg
+   :target: https://gitter.im/reanahub/reana?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
+
+.. image:: https://img.shields.io/github/license/reanahub/reana-auth-krb5.svg
+   :target: https://github.com/reanahub/reana-auth-krb5/blob/master/LICENSE
+
 About
 =====
 
