@@ -7,7 +7,7 @@ build: Dockerfile
 	docker build -t $(IMAGE) .
 
 test:
-	docker run -i -t --rm $(IMAGE) klist 2>&1 | grep "klist: No credentials"
+	docker run -i --rm $(IMAGE) klist 2>&1 | grep "klist: No credentials"
 
 push:
 	docker push $(IMAGE)
