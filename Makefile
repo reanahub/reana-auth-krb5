@@ -9,5 +9,8 @@ build: Dockerfile
 test:
 	docker run -i --rm $(IMAGE) klist 2>&1 | grep "klist: No credentials"
 
+lint:
+	docker run -i --rm hadolint/hadolint < Dockerfile
+
 push:
 	docker push $(IMAGE)

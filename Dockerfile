@@ -1,6 +1,8 @@
 FROM python:3.6-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
+
+# hadolint ignore=DL3008
 RUN apt-get update && \
     apt-get install -y \
       krb5-config \
@@ -10,6 +12,7 @@ RUN apt-get update && \
       vim-tiny \
       --no-install-recommends && \
     apt-get -y autoremove && \
-    apt-get -y clean
+    apt-get -y clean && \
+    rm -rf /var/lib/apt/lists/*
 
-ADD krb5.conf /etc/krb5.conf
+COPY krb5.conf /etc/krb5.conf
