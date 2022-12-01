@@ -33,7 +33,7 @@ true``, more information `here
 
 If you want to try it locally, a Kerberos token can be obtained via::
 
-   $ docker run -i -t --rm reanahub/reana-auth-krb5:1.0.1 /bin/bash
+   $ docker run -i -t --rm reanahub/reana-auth-krb5:1.1.0 /bin/bash
    > kinit -k -t /path/to/keytab_file username@CERN.CH
    > klist
 
@@ -54,6 +54,10 @@ inputs:
 
 Changes
 =======
+
+Version 1.1.0 (2022-12-01)
+
+- Add `krenew` utility to allow renewing of Kerberos tickets for long-running jobs.
 
 Version 1.0.1 (2020-08-12)
 
@@ -85,5 +89,6 @@ Contributors
 
 The list of contributors in alphabetical order:
 
+- `Audrius Mecionis <https://orcid.org/0000-0002-3759-1663>`_
 - `Diego Rodriguez <https://orcid.org/0000-0003-0649-2002>`_
 - `Tibor Simko <https://orcid.org/0000-0001-7202-5803>`_
