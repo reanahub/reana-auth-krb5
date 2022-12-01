@@ -7,6 +7,7 @@ RUN apt-get update && \
     apt-get install -y \
       krb5-config \
       krb5-user \
+      kstart \
       libauthen-krb5-perl \
       libkrb5-dev \
       vim-tiny \
