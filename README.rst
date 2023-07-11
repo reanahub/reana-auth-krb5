@@ -33,7 +33,7 @@ true``, more information `here
 
 If you want to try it locally, a Kerberos token can be obtained via::
 
-   $ docker run -i -t --rm reanahub/reana-auth-krb5:1.0.1 /bin/bash
+   $ docker run -i -t --rm docker.io/reanahub/reana-auth-krb5:1.0.1 /bin/bash
    > kinit -k -t /path/to/keytab_file username@CERN.CH
    > klist
 
