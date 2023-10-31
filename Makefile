@@ -10,7 +10,7 @@ test:
 	docker run -i --rm $(IMAGE) klist 2>&1 | grep "klist: No credentials"
 
 lint:
-	docker run -i --rm docker.io/hadolint/hadolint:v1.18.2 < Dockerfile
+	docker run -i --rm docker.io/hadolint/hadolint:v2.12.0 < Dockerfile
 
 push:
 	docker push $(IMAGE)
