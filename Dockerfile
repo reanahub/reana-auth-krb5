@@ -5,6 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # hadolint ignore=DL3008
 RUN apt-get update && \
     apt-get install -y \
+      inotify-tools \
       krb5-config \
       krb5-user \
       libauthen-krb5-perl \
