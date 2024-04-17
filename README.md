@@ -23,7 +23,7 @@ by means of declaring `kerberos: true`, more information
 If you want to try it locally, a Kerberos token can be obtained via:
 
 ```
-$ docker run -i -t --rm docker.io/reanahub/reana-auth-krb5:1.0.2 /bin/bash
+$ docker run -i -t --rm docker.io/reanahub/reana-auth-krb5:1.0.3 /bin/bash
 > kinit -k -t /path/to/keytab_file username@CERN.CH
 > klist
 ```
@@ -39,6 +39,10 @@ container requires additional information and inputs:
   at `/etc/krb5.conf` (overridable)
 
 ## Changes
+
+Version 1.0.3 (2024-04-18)
+
+- Upgrade container base image to Ubuntu 20.04 LTS for consistency with the other REANA cluster components.
 
 Version 1.0.2 (2024-04-17)
 
