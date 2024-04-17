@@ -1,7 +1,10 @@
-FROM docker.io/library/python:3.6-slim
+# Use Ubuntu LTS base image
+FROM docker.io/library/ubuntu:20.04
 
+# Use default answers in installation commands
 ENV DEBIAN_FRONTEND=noninteractive
 
+# Install all system dependencies in one go
 # hadolint ignore=DL3008
 RUN apt-get update && \
     apt-get install -y \
@@ -16,4 +19,5 @@ RUN apt-get update && \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/*
 
+# Copy Kerberos configuration file
 COPY krb5.conf /etc/krb5.conf
