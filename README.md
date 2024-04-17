@@ -15,7 +15,7 @@ research data analysis platform.
 
 ## Usage
 
-The `reana-auth-krb5` image is used internally in the REANA platform to refres the
+The `reana-auth-krb5` image is used internally in the REANA platform to refresh the
 Kerberos token for long running jobs. The end users can ask for Kubernetes authentication
 by means of declaring `kerberos: true`, more information
 [here](http://docs.reana.io/advanced-usage/access-control/kerberos/).
@@ -23,7 +23,7 @@ by means of declaring `kerberos: true`, more information
 If you want to try it locally, a Kerberos token can be obtained via:
 
 ```
-$ docker run -i -t --rm docker.io/reanahub/reana-auth-krb5:1.0.1 /bin/bash
+$ docker run -i -t --rm docker.io/reanahub/reana-auth-krb5:1.0.2 /bin/bash
 > kinit -k -t /path/to/keytab_file username@CERN.CH
 > klist
 ```
@@ -39,6 +39,10 @@ container requires additional information and inputs:
   at `/etc/krb5.conf` (overridable)
 
 ## Changes
+
+Version 1.0.2 (2024-04-17)
+
+- Add new dependency `inotify-tools` that provides the `inotifywait` utility that is used by REANA 0.95 to quickly stop the Kerberos sidecar containers when the user jobs finish their execution.
 
 Version 1.0.1 (2020-08-12)
 
