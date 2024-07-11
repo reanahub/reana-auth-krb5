@@ -1,5 +1,5 @@
 # Use Ubuntu LTS base image
-FROM docker.io/library/ubuntu:20.04
+FROM docker.io/library/ubuntu:24.04
 
 # Use default answers in installation commands
 ENV DEBIAN_FRONTEND=noninteractive
@@ -11,7 +11,7 @@ RUN apt-get update && \
       inotify-tools \
       krb5-config \
       krb5-user \
-      libauthen-krb5-perl \
+      libauthen-krb5-simple-perl \
       libkrb5-dev \
       vim-tiny \
       --no-install-recommends && \
